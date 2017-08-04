@@ -7,7 +7,10 @@
 Hello. My name is Joshua but many in the online world know me as Crypto | Seb or just Seb. There is absolutely no correlation between my name being Joshua and my alias being Seb (Sebastian). Simply put, I just didn’t think using my name as an alias was all that cool. Back in 2015, some online friends and I noticed a gap in the information being provided to people to better their knowledge of security, privacy, and anonymity in our ever-changing digital world. We could find papers, forum posts, and discussion around little bits and pieces but we had to do the searching ourselves and put it all together. It really wasn’t suitable for like 75% of the Internet population. So in early 2016, I had this idea of writing a paper that would encompass everything related to security, privacy, and anonymity but tailor it to all walks of Internet users; whether that is my 59-year-old grandma, or Edward Snowden like individuals. This paper, titled “The Crypto | Paper” resembles the beginning of my alias because it largely a collection of my own personal thoughts, knowledge, and experiences. As well, this paper is not going to be something that strikes every individual in a good spot 100% of the time – you WILL disagree with some of what is included and that is perfectly fine. We encourage you to submit corrections or give suggestions on how we can improve it. A full list of my contact information is available at https://cryptoseb.pw/encrypted and verifiable at https://keybase.io/cryptoseb & https://cryptoseb.pw/verified. Email/XMPP = root@cryptoseb.pw Wire = Seb 
 
 **Balockae**  
-I decided about 55% of the way through writing that I wanted to bring someone in as a second part who would be able to provide their own input into what is largely a one-sided paper. This created some issues because I hadn’t accounted for a second person or co-author so I was writing in first person. I would however, like you to meet Blake or @Ba_lock_ae on Twitter. We have been friends for a few months now and I figured he would be a great addition to the paper. So even though it has been written in first person (using “I”), some of the ideas and additions were his. I can’t take all the credit – only about 85% haha. You can get in touch with him on Twitter or through email (perdite@protonmail.ch). Wire = Hacker
+I decided about 55% of the way through writing that I wanted to bring someone in as a second part who would be able to provide their own input into what is largely a one-sided paper. This created some issues because I hadn’t accounted for a second person or co-author so I was writing in first person. I would however, like you to meet Blake or @Ba_lock_ae on Twitter. We have been friends for a few months now and I figured he would be a great addition to the paper. So even though it has been written in first person (using “I”), some of the ideas and additions were his. I can’t take all the credit – only about 85% haha. You can get in touch with him on Twitter or at (perdite@protonmail.ch) or on Wire as @Hacker
+
+**Bitmarauder**
+As a cypherpunk and wanderer on these here wires, from time to time you will find that my hands feel the need make note of what I've learned in my travels in search for truth and freedom. By trade/study I work in infosec. My anonymity and privacy when necessary are huge. For all you legacy privacy noobs, I can be reached via 'email' at bitmarauder@tuta.io or preferably on bitmessage at BM-NBQJBmcPFrHdwvRnhJJjyP1cS4dFGQ6b and like everyone should have, I'm also on Wire as @bitmarauder :: PGP http://pgp.mit.edu/pks/lookup?op=get&search=0xDCB897EB52F7A0B4
 
 **Reviewing / Content Editing**  
 Originally, I had these high hopes for this paper to get peer-reviewed by some big(ger) name people in the privacy/security industry and even though many of them agreed to take on the task, lives are busy and the paper is 61 pages. So I am just going to have to settle with a little more harsh criticism from the public. I know there has to be places in here where I am dead wrong or you think I should add/take out something so I encourage you to really speak up if you see the need. I intend on publishing an edited version 1-2 months from the initial release.  
@@ -113,6 +116,30 @@ So when we take a look at creating passwords that are secure enough to protect u
 This allows you to create passwords that you won’t forget (as you only have to remember the base and the part being changed for each site) but keep you secure. You could even write down the part that changes somewhere fairly secure, like your Notes app on your phone - if your phone makes use of a strong passcode for encryption of course. Even if your kids are snooping through those notes, you don’t have to worry because they don’t know the base you have created. From the example picture, you would be writing down grip = Facebook, toes = PayPal, etc.
 
 I would however recommend that instead of storing passwords on pieces of paper beside your computer, or in a diary you keep in your purse, or even on notes inside your mobile device, you look at getting a password manager like LastPass, Dashlane, or 1Password. I personally use and recommend LastPass for keeping all of your account information secure but easily accessible. It offers very good usability across your devices, and is accessible from anywhere in the world through your vault at LastPass.com. When you create an account, you are also creating a vault in which your passwords are stored. This vault is always encrypted on their server and is only presented in an unencrypted form to you from within their app, or in your browser after inputting your account information to decrypt it. All of this encryption happens behind the scenes and is seamless with your login. They also have enhanced security features like Two-Factor Authentication, geo-location (country) restriction, and email security notifications. However if you fall into the last 2 categories of this paper I would not recommend storing passwords in LastPass for accounts that can be accessed with a warrant. Things like your SpiderOak account do all the encryption client side and they do not store your password or encryption keys server side. So storing this password in LastPass could present itself with some issues if someone was able to provide a warrant to get in and see all your passwords. You could still store parts of these passwords in your LP Vault but in a secure fashion to simply remind you if you are forgetful. Say your password for SpiderOak was `Koala_PURPLE-2015==`, you could save the password in your vault as Ko\*\*\*\*\*\*\*5==. This should be enough to jog your memory, but not enough to give someone immediate access. For a yearly subscription to LastPass Premium, I paid $12, which is really affordable. I would link my referral code but I feel like that takes away from the idea that this paper is designed to be completely free and open. 
+
+Today, things have evolved a bit. With massive hacks done on sites like Telegram, thousands of other hacks on major cloud based service providers, the cloud might not be the best place for your most sensitive data; the passwords to your sensitive data. With ram, screen, cross channel, hard drive, evil maid attacks etc I follow the advice of Microsoft's Jesper Johansson and at least a few big thinkers in the dystopic world of cryptography and mass surveillance, that with so much surveillance maybe the best solution is a step back to writing passwords on a piece of paper. There are two reasons for this. One, you can use a custom cypher (change things up a bit) to write the passwords down so even if someone gets the paper, it's nearly useless without some serious work by a cryptographer. And two, you can put that piece of paper in your mouth and swallow it. If you need privacy, then you won't find something better than that. I use this concerpt in tandom with random output from a custom command line alias I use "pwgen -c -n -s && pwgen -c -n -s -y " which you can then pick a code block to use just to add difficulty to brute force attacks. Which brings me to another well respected solution:
+
+KeePassX
+
+With KeePassX (http://keepassx.org) one can generally rest assured that their passwords are safe as long as the symmetric password used to encrypt the database has enough entropy (digits/characters etc) I would personally recommend this over the other version which is written in Mono. Now, if you're old school and you like to keep your hands on the keyboard, then what you'll want is:
+
+Pass:
+
+Quoting their site (https://www.passwordstore.org) 
+
+With pass, each password lives inside of a gpg encrypted file whose filename is the title of the website or resource that requires the password. These encrypted files may be organized into meaningful folder hierarchies, copied from computer to computer, and, in general, manipulated using standard command line file management utilities.
+
+Another often overlooked solution that can be used with nearly all the others is called:
+
+PassCard:
+
+With passcard you can do a whole lot of creative things in order to make it useless to hackers. You can use it to tell people what a password is over the internet without saying the password. You can use it to simply store passwords and keep them with you. Also, it will take a would be hacker time to decypher which of the text is in fact your password, buying you time to change the passwords. And, best of all, the password cards can be stored on their website or generated yourself:
+
+https://www.passwordcard.org/en
+
+https://github.com/cryptofuture/PassCard
+
+Lastly, as part of this update, I will note that Edward Snowden recommends that we pick 8+ random words from a dictionary and that this would be a solid password which would resist brute force attacks for many years to come... hopefully. Things change fast in the world of cryptography and within the cypherpunk communities. It is generally a good idea if you have data and assets you with to safeguard, to stay on top of the subject as it evolves. (see the rss feeds list at the bottom)
 
 **Hashing & Authentication**  
 It is important when we learn about encryption and using it alongside strong passwords, to also take a look at how these passwords are stored on the website’s server. The issue is that once you send something to a server, it is out of your hands unless you operate the server yourself. So it is important for server owners to be storing as little information as possible on the server unless it is in an unreadable, encrypted format. SQL injections and database compromises can expose anything in plain text and they are surprisingly very common occurences. Hashing is similar to encryption but comes into play when securely storing password. When you register for many websites, they take your password and they store it on the server so that every time you login, it just compares the two passwords and if they are the same, it logs you in. However, this is incredibly insecure even with SSL implemented. The good websites/servers (which should be the majority of them now) hash your passwords before sending them to the server, which basically means storing them in a jumbled fashion. It is done commonly through what we call “hashing algorithms” like SHA256 or SHA512. As a side note, those are two common hashing algorithms that are often accompanied by PBKDF2 (which is used for key stretching https://www.schneier.com/cryptography/paperfiles/paper-low-entropy.pdf to thwart brute force attempts). Then when you login the next time to the site, your browser converts the password into that same string of random characters and matches it with the string of random characters it has stored on the server. If the two match, you are authenticated and allowed into your account. 
@@ -648,6 +675,8 @@ eCryptFs Audit - https://defuse.ca/audits/ecryptfs.htm
 
 Shitlocker - https://www.schneier.com/blog/archives/2015/03/can_the_nsa_bre_1.html
 
+Bruce Schneier - https://www.schneier.com
+
 Privacy101 - https://www.privacyinternational.org/privacy-101
 
 iOS Security - https://www.apple.com/business/docs/iOS_Security_Guide.pdf
@@ -678,6 +707,66 @@ Blockchain.info - https://blockchain.info/
 
 Prism-Break - https://prism-break.org/en/
 
+Security In a Box - https://securityinabox.org/en/
+
 Watched - https://theintercept.com/2015/07/14/communicating-secret-watched/ 
 
 Footnote *: I, Phone - https://www.youtube.com/watch?v=e-ZpsxnmmbE 
+
+
+## :large_orange_diamond::small_blue_diamond:RSS Feeds to stay on top of things:small_blue_diamond::large_orange_diamond:
+
+https://packetstormsecurity.com/feeds
+
+http://seclists.org/rss/nmap-dev.rss
+
+http://seclists.org/rss/nmap-announce.rss
+
+http://seclists.org/rss/fulldisclosure.rss
+
+http://seclists.org/rss/bugtraq.rss
+
+http://seclists.org/rss/basics.rss
+
+http://seclists.org/rss/pen-test.rss
+
+http://seclists.org/rss/isn.rss
+
+http://seclists.org/rss/firewall-wizards.rss
+
+http://seclists.org/rss/focus-ids.rss
+
+http://seclists.org/rss/webappsec.rss
+
+http://seclists.org/rss/dailydave.rss
+
+http://seclists.org/rss/pauldotcom.rss
+
+http://seclists.org/rss/honeypots.rss
+
+http://seclists.org/rss/microsoft.rss
+
+http://seclists.org/rss/funsec.rss
+
+http://seclists.org/rss/cert.rss
+
+http://seclists.org/rss/oss-sec.rss
+
+http://seclists.org/rss/securecoding.rss
+
+http://seclists.org/rss/educause.rss
+
+http://seclists.org/rss/nanog.rss
+
+http://seclists.org/rss/interesting-people.rss
+
+http://seclists.org/rss/risks.rss
+
+http://seclists.org/rss/dataloss.rss
+
+http://seclists.org/rss/metasploit.rss
+
+http://seclists.org/rss/wireshark.rss
+
+http://seclists.org/rss/snort.rss
+
